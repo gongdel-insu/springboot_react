@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gongdel'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'gradle-multi-web'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web') {
+        exclude module: "jackson-databind"
+    }
+    compile('org.springframework.boot:spring-boot-starter-hateoas')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

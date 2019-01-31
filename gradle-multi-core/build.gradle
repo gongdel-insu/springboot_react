@@ -1,3 +1,4 @@
+
 plugins {
     id 'java'
 }
@@ -10,6 +11,9 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+//bootJar 비활성화시
+bootJar.enabled = false
+jar.enabled = true
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
