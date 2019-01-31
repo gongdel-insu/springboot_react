@@ -13,7 +13,7 @@ public class MemberRestController {
 
     private MemberService memberService;
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public Member get() {
         return new Member("gongdel", "gongdel@gmail.com");
     }
