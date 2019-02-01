@@ -4,22 +4,15 @@ jdk:
 
 branches:
   only:
-  - master
+    - master
 
 # Travis CI 서버의 Home
 cache:
   directories:
-  - '$HOME/.m2/repository'
-  - '$HOME/.gradle'
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
 
 script: "./gradlew clean build"
-
-# CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-    - yolip51@gmail.com
-    - insoo2846@gmail.com
 
 # S3 Deploy
 before_deploy:
@@ -55,3 +48,10 @@ deploy:
     on:
       repo: gongdel-insu/springboot_react
       branch: master
+
+# CI 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - yolip51@gmail.com
+      - insoo2846@gmail.com
