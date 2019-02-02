@@ -13,8 +13,8 @@ cache:
     - '$HOME/.gradle'
 
 script:
-  - .cd ./gradle-multi-web/client & npm install
-  - yarn build & cd.. & cd..
+  - cd ./gradle-multi-web/client & npm install
+  - yarn build & cd .. & cd ..
   - ./gradlew clean build
 
 # S3 Deploy
