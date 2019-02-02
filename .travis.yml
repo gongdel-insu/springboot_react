@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - develop
+    - master
 
 # Travis CI 서버의 Home
 cache:
@@ -13,9 +13,8 @@ cache:
     - '$HOME/.gradle'
 
 script:
-  - cd ./gradle-multi-web/client & npm install
-  - yarn build & cd .. & cd ..
-  - ./gradlew clean build
+  - "./gradlew webpack"
+  - "./gradlew clean build"
 
 # S3 Deploy
 before_deploy:
