@@ -58,12 +58,12 @@ project(':gradle-multi-core') {
 }
 */
 
-task npmInstall(type:Exec) {
+/*task npmInstall(type:Exec) {
     workingDir 'gradle-multi-web/client'
     commandLine 'npm', 'install'
-}
+}*/
 
-task webpack(type:Exec, dependsOn:npmInstall) {
+task webpack(type:Exec) {
     workingDir 'gradle-multi-web/client'
     commandLine 'yarn', 'build'
 }
