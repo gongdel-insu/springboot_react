@@ -12,7 +12,9 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew clean build"
+script:
+  - "./gradlew webpack"
+  - "./gradlew clean build"
 
 # S3 Deploy
 before_deploy:
