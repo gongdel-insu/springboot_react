@@ -30,7 +30,7 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
 
     group = 'com.gongdel'
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.2'
     sourceCompatibility = '1.8'
 
     repositories {
@@ -60,11 +60,13 @@ project(':gradle-multi-core') {
 
 task npmInstall(type:Exec) {
     workingDir 'gradle-multi-web/client'
+    logging.level = LogLevel.INFO
     commandLine 'npm', 'install'
 }
 
 task webpack(type:Exec, dependsOn:npmInstall) {
     workingDir 'gradle-multi-web/client'
+    logging.level = LogLevel.INFO
     commandLine 'yarn', 'build'
 }
 
