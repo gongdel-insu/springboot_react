@@ -60,13 +60,13 @@ project(':gradle-multi-core') {
 
 task npmInstall(type:Exec) {
     workingDir 'gradle-multi-web/client'
-    logging.level = LogLevel.INFO
+    logging.level = LogLevel.ERROR
     commandLine 'npm', 'install'
 }
 
 task webpack(type:Exec, dependsOn:npmInstall) {
     workingDir 'gradle-multi-web/client'
-    logging.level = LogLevel.INFO
+    logging.level = LogLevel.ERROR
     commandLine 'yarn', 'build'
 }
 
