@@ -58,17 +58,17 @@ project(':gradle-multi-core') {
 }
 */
 
-task npmInstall(type:Exec) {
+/*task npmInstall(type:Exec) {
     workingDir 'gradle-multi-web/client'
     logging.level = LogLevel.ERROR
-    commandLine 'npm', 'install'
+    commandLine 'sudo','npm', 'install'
 }
 
 task webpack(type:Exec, dependsOn:npmInstall) {
     workingDir 'gradle-multi-web/client'
     logging.level = LogLevel.ERROR
     commandLine 'sudo', 'yarn', 'build'
-}
+}*/
 
 project(':gradle-multi-web') {
     dependencies{

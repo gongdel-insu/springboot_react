@@ -16,6 +16,18 @@ jar {
     version = '0.0.1-SNAPSHOT'
 }
 
+task npmInstall(type:Exec) {
+    workingDir './client'
+    logging.level = LogLevel.ERROR
+    commandLine 'sudo', 'npm', 'install'
+}
+
+task webpack(type:Exec, dependsOn:npmInstall) {
+    workingDir './client'
+    logging.level = LogLevel.ERROR
+    commandLine 'sudo', 'yarn', 'build'
+}
+
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web') {
         exclude module: "jackson-databind"
