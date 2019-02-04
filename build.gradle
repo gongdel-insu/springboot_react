@@ -67,7 +67,7 @@ task npmInstall(type:Exec) {
 task webpack(type:Exec, dependsOn:npmInstall) {
     workingDir 'gradle-multi-web/client'
     logging.level = LogLevel.ERROR
-    commandLine 'yarn', 'build'
+    commandLine 'sudo', 'yarn', 'build'
 }
 
 project(':gradle-multi-web') {
