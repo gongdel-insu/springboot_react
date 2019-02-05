@@ -3,4 +3,9 @@
 
 + SpringBoot
     + Spring Data Jpa
++ AWS
+    + EC2
+    + S3
+    + CodeDeploy
 + React(by TypeScript)
++ Travis
