@@ -19,13 +19,13 @@ jar {
 task npmInstall(type:Exec) {
     workingDir './client'
     logging.level = LogLevel.ERROR
-    commandLine 'sudo', 'npm', 'install'
+    commandLine 'npm', 'install'
 }
 
 task webpack(type:Exec, dependsOn:npmInstall) {
     workingDir './client'
     logging.level = LogLevel.ERROR
-    commandLine 'sudo', 'yarn', 'build'
+    commandLine 'yarn', 'build'
 }
 
 dependencies {
