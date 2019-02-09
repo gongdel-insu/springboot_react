@@ -1,19 +1,45 @@
 import * as React from 'react';
-import './App.css';
-
-import logo from './logo.svg';
+import Head from "./Head";
+import Header from "./Header";
+import Intro from "./Intro";
+import About from "./About";
+import Resume from "./Resume";
+import Portfolio from "./Portfolio";
+import Cta from "./Cta";
+import Services from "./Services";
+import Stats from "./Stats";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 class App extends React.Component {
-  public render() {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.[test: aws code deploy6]
-        </p>
+      <div>
+        <Head/>
+        {}
+        <Header /> {}
+        {}
+        <Intro /> {}
+        {}
+        <About /> {}
+        {}
+        <Resume /> {}
+        {}
+        <Portfolio /> {}
+        {}
+        <Cta /> {}
+        {}
+        <Services /> {}
+        {}
+        <Stats /> {}
+        {}
+        <Contact /> {}
+        {}
+        <Footer />
+        <div id="preloader">
+          <div id="loader" />
+        </div>
+        {}
       </div>
     );
   }

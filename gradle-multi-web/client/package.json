@@ -9,12 +9,6 @@
   },
   "scripts": {
     "start": "react-scripts-ts start",
-   /*
-      aws ec2 freetier 버전으로는 무중단 메모리 불가 ㅠ
-    "start_set1": "PORT=3001 react-scripts-ts start",
-    "start_set2": "PORT=3002 react-scripts-ts start",
-
-    */
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
