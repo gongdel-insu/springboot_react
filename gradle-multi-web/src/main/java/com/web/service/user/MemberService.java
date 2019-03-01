@@ -4,6 +4,8 @@ import com.core.domain.user.Member;
 import com.core.domain.user.MemberRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberService {
 
@@ -15,5 +17,9 @@ public class MemberService {
 
     public Long signup(Member member) {
         return memberRepository.save(member).getId();
+    }
+
+    public List<Member> memberList() {
+        return memberRepository.findAll();
     }
 }
