@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-
+import Title from './Title';
+import Container from '../components/commons/Container';
 class App extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Ha1asd23sdI</h1>
+				<Container Title={Title} LeftContent={'1'} RightContent={'2'} />
 			</div>
 		);
 	}
